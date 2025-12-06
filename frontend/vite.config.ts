@@ -17,6 +17,7 @@ export default defineConfig({
       devOptions: {
         enabled: true,
         navigateFallback: "/index.html",
+        type: "module",
       },
       registerType: "autoUpdate",
       manifestFilename: "manifest.webmanifest",

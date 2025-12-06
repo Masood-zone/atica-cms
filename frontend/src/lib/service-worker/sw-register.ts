@@ -2,7 +2,10 @@ export async function registerServiceWorker() {
   if ("serviceWorker" in navigator) {
     try {
       // During dev with VitePWA devOptions enabled, the SW is available at this path
-      const reg = await navigator.serviceWorker.register("/service-worker.js", {
+      const swUrl = import.meta.env.DEV
+        ? "/dev-sw.js?dev-sw"
+        : "/service-worker.js";
+      const reg = await navigator.serviceWorker.register(swUrl, {
         type: "module",
       });
       // Listen for updates
