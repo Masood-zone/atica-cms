@@ -14,6 +14,10 @@ import { prepaymentRoutes } from "./prepayment-routes";
 import { reportsRoutes } from "./reports-routes";
 
 export const setupRoutes = (app: Express) => {
+  // Health check endpoint for connectivity verification
+  app.get("/health", (_req, res) => {
+    res.json({ status: "ok" });
+  });
   app.use("/auth", authRoutes);
   app.use("/admins", adminRoutes);
   app.use("/users", userRoutes);
