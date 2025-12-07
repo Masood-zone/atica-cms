@@ -129,7 +129,7 @@ export default function ReferencesTable() {
         <ReferenceModal />
       </div>
       {isLoading ? (
-        <TableSkeleton />
+        <TableSkeleton title="Loading References..." />
       ) : (
         <DataTable
           data={references || []}

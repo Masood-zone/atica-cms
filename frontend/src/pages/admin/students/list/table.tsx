@@ -128,7 +128,7 @@ export default function StudentsTable({
   return (
     <div className="container w-full mx-auto py-10 px-4 sm:px-0 lg:px-0">
       {isLoading ? (
-        <TableSkeleton />
+        <TableSkeleton title="Loading Students..." />
       ) : error ? (
         <div>There was an error!</div>
       ) : (

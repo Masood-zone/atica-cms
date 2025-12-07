@@ -134,7 +134,7 @@ export default function ExpensesTable() {
     "expenses"
   );
 
-  if (isLoading) return <TableSkeleton />;
+  if (isLoading) return <TableSkeleton title="Loading Expenses..." />;
   if (error) return <div>Error fetching expenses</div>;
 
   return (

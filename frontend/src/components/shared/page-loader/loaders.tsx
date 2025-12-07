@@ -1,19 +1,19 @@
 import { Skeleton } from "@/components/ui/skeleton";
 
-export function TableSkeleton() {
+export function TableSkeleton({ title }: { title?: string }) {
   return (
     <div className="container w-full mx-auto py-10 px-4 sm:px-0 lg:px-0">
-      <DataTableSkeleton />
+      <DataTableSkeleton title={title} />
     </div>
   );
 }
 
-function DataTableSkeleton() {
+function DataTableSkeleton({ title }: { title?: string }) {
   return (
     <div className="flex flex-col space-y-5">
       <div className="w-full h-16 bg-primary">
         <span className="flex items-center justify-center h-full text-white font-semibold text-lg">
-          Select a class to see their canteen records.
+          {title || "Loading..."}
         </span>
       </div>
       <div className="w-full h-16 bg-gray-300" />

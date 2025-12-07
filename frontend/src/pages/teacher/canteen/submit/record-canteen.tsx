@@ -102,7 +102,7 @@ export default function SubmitCanteenRecords() {
     );
   };
 
-  if (isLoading) return <TableSkeleton />;
+  if (isLoading) return <TableSkeleton title="Loading Student Records..." />;
   if (error) return <div>Error fetching student records</div>;
 
   return (

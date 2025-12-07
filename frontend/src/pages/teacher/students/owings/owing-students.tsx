@@ -43,7 +43,7 @@ export default function OwingStudents() {
     navigate(`/teacher/students/owing-students/${studentId}`);
   };
 
-  if (isLoading) return <TableSkeleton />;
+  if (isLoading) return <TableSkeleton title="Loading Owing Students..." />;
   if (error)
     return (
       <Card className="mx-auto max-w-md mt-8">

@@ -37,7 +37,7 @@ export default function SubmittedRecords() {
     error,
   } = useTeacherSubmittedRecords(supervisorId, formattedDate);
 
-  if (isLoading) return <TableSkeleton />;
+  if (isLoading) return <TableSkeleton title="Loading Submitted Records..." />;
   if (error) return <div>Error fetching submitted records</div>;
 
   return (

@@ -245,7 +245,7 @@ export default function TeacherPrepayments() {
         </CardHeader>
         <CardContent>
           {isLoading ? (
-            <TableSkeleton />
+            <TableSkeleton title="Loading Students with Prepayments..." />
           ) : (
             <div className="space-y-4">
               {studentsWithPrepayments.map((student) => (
