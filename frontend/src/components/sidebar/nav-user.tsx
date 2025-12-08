@@ -20,6 +20,7 @@ import { useLogout } from "@/hooks/use-auth";
 import LoadingOverlay from "../shared/page-loader/loading-overlay";
 import { getInitials } from "@/utils/getInitials";
 import { useNavigate } from "react-router-dom";
+import ThemeButtonMode from "../shared/theme-toggle";
 
 export function NavUser({ user }: { user: User }) {
   const navigate = useNavigate();
@@ -43,11 +44,11 @@ export function NavUser({ user }: { user: User }) {
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+              className="hover:bg-sidebar-primary hover:text-white data-[state=open]:bg-sidebar-primary dark:data-[state=open]:bg-sidebar data-[state=open]:text-sidebar-accent-foreground dark:hover:bg-muted/100 dark:data-[state=open]:text-white dark:text-white"
             >
-              <Avatar className="h-8 w-8 rounded-lg">
+              <Avatar className="h-8 w-8 rounded-lg ">
                 <AvatarImage src={avatar} alt={name || email} />
-                <AvatarFallback className="rounded-lg">
+                <AvatarFallback className="rounded-lg dark:bg-sidebar-primary dark:text-white">
                   {initials}
                 </AvatarFallback>
               </Avatar>
@@ -82,6 +83,7 @@ export function NavUser({ user }: { user: User }) {
             {/* Account */}
             <DropdownMenuGroup>
               <DropdownMenuItem
+                className="cursor-pointer"
                 onClick={() => {
                   if (role == "SUPER_ADMIN") {
                     navigate("/admin/settings");
@@ -97,8 +99,18 @@ export function NavUser({ user }: { user: User }) {
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
+
+            {/* Theme toggle */}
+            <div className="flex items-center justify-between gap-2 py-0.5 px-3">
+              <span className="text-sm ">Theme</span>
+              <ThemeButtonMode />
+            </div>
+            <DropdownMenuSeparator />
             {/* Logout button */}
-            <DropdownMenuItem onClick={() => logout()}>
+            <DropdownMenuItem
+              onClick={() => logout()}
+              className="cursor-pointer"
+            >
               <LogOut />
               Log out
             </DropdownMenuItem>

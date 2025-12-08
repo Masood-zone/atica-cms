@@ -78,7 +78,9 @@ export function AdminSidebar({
                       className="w-4 h-4"
                     />
                   </div>
-                  <span className="text-sm">Canteen Management System</span>
+                  <span className="text-sm">
+                    Atica Canteen Management System
+                  </span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

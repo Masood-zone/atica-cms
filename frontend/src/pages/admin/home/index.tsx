@@ -3,7 +3,6 @@ import { CardsSkeleton } from "@/components/shared/page-loader/loaders";
 import { useAdminDashboardAnalytics } from "@/services/api/analytics/analytics.queries";
 import {
   BookOpen,
-  // CurrencyIcon,
   School,
   Users,
   CalendarDays,
@@ -35,9 +34,11 @@ export default function AdminHome() {
               <AnalyticsCard
                 title="Total Teachers"
                 value={analytics?.totalTeachers || 0}
-                icon={<Users className="size-6 text-blue-500" />}
+                icon={
+                  <Users className="size-6 text-blue-500 dark:text-blue-400" />
+                }
                 notice="Total number of teachers in the school"
-                className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200"
+                className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 text-gray-900 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:text-gray-100"
               />
             </div>
             <div
@@ -47,45 +48,55 @@ export default function AdminHome() {
               <AnalyticsCard
                 title="Total Students"
                 value={analytics?.totalStudents || 0}
-                icon={<School className="size-6 text-emerald-500" />}
+                icon={
+                  <School className="size-6 text-emerald-500 dark:text-emerald-400" />
+                }
                 notice="Total number of students in the school"
-                className="bg-gradient-to-br from-emerald-50 to-emerald-100 border-emerald-200"
+                className="bg-gradient-to-br from-emerald-50 to-emerald-100 border-emerald-200 text-gray-900 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:text-gray-100"
               />
             </div>
             <div className="cursor-pointer">
               <AnalyticsCard
                 title="Total Daily Collection"
                 value={`₵${analytics?.totalDailyCollection || 0}`}
-                icon={<CalendarDays className="size-6 text-amber-500" />}
+                icon={
+                  <CalendarDays className="size-6 text-amber-500 dark:text-amber-400" />
+                }
                 notice="Expected collection from all students today"
-                className="bg-gradient-to-br from-amber-50 to-amber-100 border-amber-200"
+                className="bg-gradient-to-br from-amber-50 to-amber-100 border-amber-200 text-gray-900 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:text-gray-100"
               />
             </div>
             <div className="cursor-pointer">
               <AnalyticsCard
                 title="Total Monthly Collection"
                 value={`₵${analytics?.totalMonthlyCollection || 0}`}
-                icon={<CalendarCheck2 className="size-6 text-green-500" />}
+                icon={
+                  <CalendarCheck2 className="size-6 text-green-500 dark:text-green-400" />
+                }
                 notice="Expected collection from all students this month (school days)"
-                className="bg-gradient-to-br from-green-50 to-green-100 border-green-200"
+                className="bg-gradient-to-br from-green-50 to-green-100 border-green-200 text-gray-900 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:text-gray-100"
               />
             </div>
             <div className="cursor-pointer">
               <AnalyticsCard
                 title="Total Daily Expenses"
                 value={`₵${analytics?.totalDailyExpenses || 0}`}
-                icon={<ReceiptText className="size-6 text-red-500" />}
+                icon={
+                  <ReceiptText className="size-6 text-red-500 dark:text-red-400" />
+                }
                 notice="Total expenses recorded today"
-                className="bg-gradient-to-br from-red-50 to-red-100 border-red-200"
+                className="bg-gradient-to-br from-red-50 to-red-100 border-red-200 text-gray-900 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:text-gray-100"
               />
             </div>
             <div className="cursor-pointer">
               <AnalyticsCard
                 title="Total Monthly Expenses"
                 value={`₵${analytics?.totalMonthlyExpenses || 0}`}
-                icon={<ReceiptText className="size-6 text-orange-500" />}
+                icon={
+                  <ReceiptText className="size-6 text-orange-500 dark:text-orange-400" />
+                }
                 notice="Total expenses recorded this month"
-                className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200"
+                className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200 text-gray-900 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:text-gray-100"
               />
             </div>
             {/* <div
@@ -107,9 +118,11 @@ export default function AdminHome() {
               <AnalyticsCard
                 title="Total Classes"
                 value={analytics?.totalClasses || 0}
-                icon={<BookOpen className="size-6 text-purple-500" />}
+                icon={
+                  <BookOpen className="size-6 text-purple-500 dark:text-purple-400" />
+                }
                 notice="Total number of classes in the school"
-                className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200"
+                className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 text-gray-900 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:text-gray-100"
               />
             </div>
           </div>
