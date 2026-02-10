@@ -4,7 +4,7 @@ export const apiClient = axios.create({
   // baseURL: "https://atica-backend.onrender.com",
   baseURL: "http://localhost:3400",
   headers: {
-    "Access-Control-Allow-Origin": "*",
+    // "Access-Control-Allow-Origin": "*",
     "Content-Type": "application/json",
   },
 });
