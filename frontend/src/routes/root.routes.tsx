@@ -42,9 +42,8 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="contact-us"
           lazy={async () => {
-            const { default: ContactUs } = await import(
-              "@/pages/auth/help/contact-us.tsx"
-            );
+            const { default: ContactUs } =
+              await import("@/pages/auth/help/contact-us.tsx");
             return { Component: ContactUs };
           }}
         />
@@ -52,18 +51,16 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="terms-and-conditions"
           lazy={async () => {
-            const { default: TermsAndConditions } = await import(
-              "@/pages/auth/help/terms-and-conditions.tsx"
-            );
+            const { default: TermsAndConditions } =
+              await import("@/pages/auth/help/terms-and-conditions.tsx");
             return { Component: TermsAndConditions };
           }}
         />
         <Route
           path="*"
           lazy={async () => {
-            const { default: NotFound } = await import(
-              "@/pages/not-found/not-found.tsx"
-            );
+            const { default: NotFound } =
+              await import("@/pages/not-found/not-found.tsx");
             return { Component: NotFound };
           }}
         />
@@ -100,18 +97,16 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="settings"
           lazy={async () => {
-            const { default: SettingsLayout } = await import(
-              "@/pages/admin/settings/index.tsx"
-            );
+            const { default: SettingsLayout } =
+              await import("@/pages/admin/settings/index.tsx");
             return { Component: SettingsLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Settings } = await import(
-                "@/pages/admin/settings/settings.tsx"
-              );
+              const { default: Settings } =
+                await import("@/pages/admin/settings/settings.tsx");
               return { Component: Settings };
             }}
           />
@@ -119,9 +114,8 @@ const rootRoutes = createBrowserRouter(
           <Route
             path="profile"
             lazy={async () => {
-              const { default: Profile } = await import(
-                "@/pages/admin/settings/profile/profile.tsx"
-              );
+              const { default: Profile } =
+                await import("@/pages/admin/settings/profile/profile.tsx");
               return { Component: Profile };
             }}
           />
@@ -129,9 +123,8 @@ const rootRoutes = createBrowserRouter(
           <Route
             path="canteen"
             lazy={async () => {
-              const { default: Canteen } = await import(
-                "@/pages/admin/settings/canteen/canteen.tsx"
-              );
+              const { default: Canteen } =
+                await import("@/pages/admin/settings/canteen/canteen.tsx");
               return { Component: Canteen };
             }}
           />
@@ -140,45 +133,40 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="administrators"
           lazy={async () => {
-            const { default: AdministratorLayout } = await import(
-              "@/pages/admin/administrators/index.tsx"
-            );
+            const { default: AdministratorLayout } =
+              await import("@/pages/admin/administrators/index.tsx");
             return { Component: AdministratorLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Administrators } = await import(
-                "@/pages/admin/administrators/administrators.tsx"
-              );
+              const { default: Administrators } =
+                await import("@/pages/admin/administrators/administrators.tsx");
               return { Component: Administrators };
             }}
           />
           <Route
             path="add"
             lazy={async () => {
-              const { default: AddAdmin } = await import(
-                "@/pages/admin/administrators/add/create-admin.tsx"
-              );
+              const { default: AddAdmin } =
+                await import("@/pages/admin/administrators/add/create-admin.tsx");
               return { Component: AddAdmin };
             }}
           />
           <Route
             path=":id"
             lazy={async () => {
-              const { default: ViewAdmin } = await import(
-                "@/pages/admin/administrators/view/view-admin.tsx"
-              );
+              const { default: ViewAdmin } =
+                await import("@/pages/admin/administrators/view/view-admin.tsx");
               return { Component: ViewAdmin };
             }}
           />
           <Route
             path=":id/edit"
             lazy={async () => {
-              const { default: EditAdmin } = await import(
-                "@/pages/admin/administrators/edit/edit-admin.tsx"
-              );
+              const { default: EditAdmin } =
+                await import("@/pages/admin/administrators/edit/edit-admin.tsx");
               return { Component: EditAdmin };
             }}
           />
@@ -187,27 +175,24 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="teachers"
           lazy={async () => {
-            const { default: TeachersLayout } = await import(
-              "@/pages/admin/teachers/index.tsx"
-            );
+            const { default: TeachersLayout } =
+              await import("@/pages/admin/teachers/index.tsx");
             return { Component: TeachersLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Teachers } = await import(
-                "@/pages/admin/teachers/teachers.tsx"
-              );
+              const { default: Teachers } =
+                await import("@/pages/admin/teachers/teachers.tsx");
               return { Component: Teachers };
             }}
           />
           <Route
             path="add"
             lazy={async () => {
-              const { default: AddTeacher } = await import(
-                "@/pages/admin/teachers/add/create-teacher.tsx"
-              );
+              const { default: AddTeacher } =
+                await import("@/pages/admin/teachers/add/create-teacher.tsx");
               return { Component: AddTeacher };
             }}
           />
@@ -215,9 +200,8 @@ const rootRoutes = createBrowserRouter(
           <Route
             path=":id/edit"
             lazy={async () => {
-              const { default: EditTeacher } = await import(
-                "@/pages/admin/teachers/edit/edit-teacher.tsx"
-              );
+              const { default: EditTeacher } =
+                await import("@/pages/admin/teachers/edit/edit-teacher.tsx");
               return { Component: EditTeacher };
             }}
           />
@@ -226,27 +210,24 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="students"
           lazy={async () => {
-            const { default: StudentsLayout } = await import(
-              "@/pages/admin/students"
-            );
+            const { default: StudentsLayout } =
+              await import("@/pages/admin/students");
             return { Component: StudentsLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Students } = await import(
-                "@/pages/admin/students/students.tsx"
-              );
+              const { default: Students } =
+                await import("@/pages/admin/students/students.tsx");
               return { Component: Students };
             }}
           />
           <Route
             path="add"
             lazy={async () => {
-              const { default: AddStudent } = await import(
-                "@/pages/admin/students/add/create-student.tsx"
-              );
+              const { default: AddStudent } =
+                await import("@/pages/admin/students/add/create-student.tsx");
               return { Component: AddStudent };
             }}
           />
@@ -254,9 +235,8 @@ const rootRoutes = createBrowserRouter(
           <Route
             path=":id/edit"
             lazy={async () => {
-              const { default: EditStudent } = await import(
-                "@/pages/admin/students/edit/edit-student.tsx"
-              );
+              const { default: EditStudent } =
+                await import("@/pages/admin/students/edit/edit-student.tsx");
               return { Component: EditStudent };
             }}
           />
@@ -265,45 +245,40 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="classes"
           lazy={async () => {
-            const { default: ClassesLayout } = await import(
-              "@/pages/admin/classes"
-            );
+            const { default: ClassesLayout } =
+              await import("@/pages/admin/classes");
             return { Component: ClassesLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Classes } = await import(
-                "@/pages/admin/classes/classes.tsx"
-              );
+              const { default: Classes } =
+                await import("@/pages/admin/classes/classes.tsx");
               return { Component: Classes };
             }}
           />
           <Route
             path="add"
             lazy={async () => {
-              const { default: AddClass } = await import(
-                "@/pages/admin/classes/add/create-class.tsx"
-              );
+              const { default: AddClass } =
+                await import("@/pages/admin/classes/add/create-class.tsx");
               return { Component: AddClass };
             }}
           />
           <Route
             path=":id"
             lazy={async () => {
-              const { default: ViewClass } = await import(
-                "@/pages/admin/classes/view/view-class.tsx"
-              );
+              const { default: ViewClass } =
+                await import("@/pages/admin/classes/view/view-class.tsx");
               return { Component: ViewClass };
             }}
           />
           <Route
             path=":id/edit"
             lazy={async () => {
-              const { default: EditClass } = await import(
-                "@/pages/admin/classes/edit/edit-class.tsx"
-              );
+              const { default: EditClass } =
+                await import("@/pages/admin/classes/edit/edit-class.tsx");
               return { Component: EditClass };
             }}
           />
@@ -312,9 +287,8 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="canteen-records"
           lazy={async () => {
-            const { default: AdminCanteenLayout } = await import(
-              "@/pages/admin/canteen"
-            );
+            const { default: AdminCanteenLayout } =
+              await import("@/pages/admin/canteen");
             return { Component: AdminCanteenLayout };
           }}
         >
@@ -322,18 +296,16 @@ const rootRoutes = createBrowserRouter(
           <Route
             path="setup-canteen"
             lazy={async () => {
-              const { default: SetupCanteenLayout } = await import(
-                "@/pages/admin/canteen/setup/index.tsx"
-              );
+              const { default: SetupCanteenLayout } =
+                await import("@/pages/admin/canteen/setup/index.tsx");
               return { Component: SetupCanteenLayout };
             }}
           >
             <Route
               index
               lazy={async () => {
-                const { default: SetupCanteenTabs } = await import(
-                  "@/pages/admin/canteen/setup/setup.tsx"
-                );
+                const { default: SetupCanteenTabs } =
+                  await import("@/pages/admin/canteen/setup/setup.tsx");
                 return { Component: SetupCanteenTabs };
               }}
             />
@@ -342,18 +314,16 @@ const rootRoutes = createBrowserRouter(
           <Route
             index
             lazy={async () => {
-              const { default: CanteenRecords } = await import(
-                "@/pages/admin/canteen/canteen.tsx"
-              );
+              const { default: CanteenRecords } =
+                await import("@/pages/admin/canteen/canteen.tsx");
               return { Component: CanteenRecords };
             }}
           />
           <Route
             path=":teacherId/records"
             lazy={async () => {
-              const { default: TeacherRecordsDetail } = await import(
-                "@/pages/admin/canteen/details/records-detail.tsx"
-              );
+              const { default: TeacherRecordsDetail } =
+                await import("@/pages/admin/canteen/details/records-detail.tsx");
               return { Component: TeacherRecordsDetail };
             }}
           />
@@ -362,27 +332,24 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="owings"
           lazy={async () => {
-            const { default: OwingsLayout } = await import(
-              "@/pages/admin/canteen"
-            );
+            const { default: OwingsLayout } =
+              await import("@/pages/admin/canteen");
             return { Component: OwingsLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Owings } = await import(
-                "@/pages/admin/canteen/owings/owings.tsx"
-              );
+              const { default: Owings } =
+                await import("@/pages/admin/canteen/owings/owings.tsx");
               return { Component: Owings };
             }}
           />
           <Route
             path=":id"
             lazy={async () => {
-              const { default: StudentOwingDetails } = await import(
-                "@/pages/admin/canteen/owings/[id]/student-owing-details.tsx"
-              );
+              const { default: StudentOwingDetails } =
+                await import("@/pages/admin/canteen/owings/[id]/student-owing-details.tsx");
               return { Component: StudentOwingDetails };
             }}
           />
@@ -391,18 +358,16 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="prepayments"
           lazy={async () => {
-            const { default: PrepaymentsLayout } = await import(
-              "@/pages/admin/canteen/prepayments/index.tsx"
-            );
+            const { default: PrepaymentsLayout } =
+              await import("@/pages/admin/canteen/prepayments/index.tsx");
             return { Component: PrepaymentsLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Prepayments } = await import(
-                "@/pages/admin/canteen/prepayments/prepayments.tsx"
-              );
+              const { default: Prepayments } =
+                await import("@/pages/admin/canteen/prepayments/prepayments.tsx");
               return { Component: Prepayments };
             }}
           />
@@ -412,54 +377,48 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="accounts"
           lazy={async () => {
-            const { default: ExpensesLayout } = await import(
-              "@/pages/admin/expenses"
-            );
+            const { default: ExpensesLayout } =
+              await import("@/pages/admin/expenses");
             return { Component: ExpensesLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Expenses } = await import(
-                "@/pages/admin/expenses/expenses.tsx"
-              );
+              const { default: Expenses } =
+                await import("@/pages/admin/expenses/expenses.tsx");
               return { Component: Expenses };
             }}
           />
           <Route
             path="add"
             lazy={async () => {
-              const { default: AddExpense } = await import(
-                "@/pages/admin/expenses/add/create-expense.tsx"
-              );
+              const { default: AddExpense } =
+                await import("@/pages/admin/expenses/add/create-expense.tsx");
               return { Component: AddExpense };
             }}
           />
           <Route
             path=":id"
             lazy={async () => {
-              const { default: ViewExpense } = await import(
-                "@/pages/admin/expenses/view/view-expense.tsx"
-              );
+              const { default: ViewExpense } =
+                await import("@/pages/admin/expenses/view/view-expense.tsx");
               return { Component: ViewExpense };
             }}
           />
           <Route
             path=":id/edit"
             lazy={async () => {
-              const { default: EditExpense } = await import(
-                "@/pages/admin/expenses/edit/edit-expense.tsx"
-              );
+              const { default: EditExpense } =
+                await import("@/pages/admin/expenses/edit/edit-expense.tsx");
               return { Component: EditExpense };
             }}
           />
           <Route
             path="overall-totals"
             lazy={async () => {
-              const { default: OverallTotals } = await import(
-                "@/pages/admin/expenses/overall/overall.tsx"
-              );
+              const { default: OverallTotals } =
+                await import("@/pages/admin/expenses/overall/overall.tsx");
               return { Component: OverallTotals };
             }}
           />
@@ -468,18 +427,16 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="reports"
           lazy={async () => {
-            const { default: ReportsLayout } = await import(
-              "@/pages/admin/reports"
-            );
+            const { default: ReportsLayout } =
+              await import("@/pages/admin/reports");
             return { Component: ReportsLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Reports } = await import(
-                "@/pages/admin/reports/index.tsx"
-              );
+              const { default: Reports } =
+                await import("@/pages/admin/reports/index.tsx");
               return { Component: Reports };
             }}
           />
@@ -488,9 +445,8 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="*"
           lazy={async () => {
-            const { default: NotFound } = await import(
-              "../pages/not-found/not-found.tsx"
-            );
+            const { default: NotFound } =
+              await import("../pages/not-found/not-found.tsx");
             return { Component: NotFound };
           }}
         />
@@ -514,27 +470,24 @@ const rootRoutes = createBrowserRouter(
         <Route
           index
           lazy={async () => {
-            const { default: TeacherHome } = await import(
-              "@/pages/teacher/home"
-            );
+            const { default: TeacherHome } =
+              await import("@/pages/teacher/home");
             return { Component: TeacherHome };
           }}
         />
         <Route
           path="canteen"
           lazy={async () => {
-            const { default: CanteenLayout } = await import(
-              "@/pages/teacher/canteen"
-            );
+            const { default: CanteenLayout } =
+              await import("@/pages/teacher/canteen");
             return { Component: CanteenLayout };
           }}
         >
           <Route
             path="submitted-records"
             lazy={async () => {
-              const { default: SubmittedRecords } = await import(
-                "@/pages/teacher/canteen/list/submitted-records-list.tsx"
-              );
+              const { default: SubmittedRecords } =
+                await import("@/pages/teacher/canteen/list/submitted-records-list.tsx");
               return { Component: SubmittedRecords };
             }}
           />
@@ -542,9 +495,8 @@ const rootRoutes = createBrowserRouter(
           <Route
             path=":id/view"
             lazy={async () => {
-              const { default: ViewCanteenRecord } = await import(
-                "@/pages/teacher/canteen/view/view-canteen.records.tsx"
-              );
+              const { default: ViewCanteenRecord } =
+                await import("@/pages/teacher/canteen/view/view-canteen.records.tsx");
               return { Component: ViewCanteenRecord };
             }}
           />
@@ -552,36 +504,32 @@ const rootRoutes = createBrowserRouter(
           <Route
             path=":id/edit"
             lazy={async () => {
-              const { default: EditCanteenRecord } = await import(
-                "@/pages/teacher/canteen/edit/edit-canteen.tsx"
-              );
+              const { default: EditCanteenRecord } =
+                await import("@/pages/teacher/canteen/edit/edit-canteen.tsx");
               return { Component: EditCanteenRecord };
             }}
           />
           <Route
             index
             lazy={async () => {
-              const { default: Canteen } = await import(
-                "@/pages/teacher/canteen/canteen.tsx"
-              );
+              const { default: Canteen } =
+                await import("@/pages/teacher/canteen/canteen.tsx");
               return { Component: Canteen };
             }}
           />
           <Route
             path="submit"
             lazy={async () => {
-              const { default: SubmitCanteenRecords } = await import(
-                "@/pages/teacher/canteen/submit/record-canteen.tsx"
-              );
+              const { default: SubmitCanteenRecords } =
+                await import("@/pages/teacher/canteen/submit/record-canteen.tsx");
               return { Component: SubmitCanteenRecords };
             }}
           />
           <Route
             path=":id/edit"
             lazy={async () => {
-              const { default: EditCanteenRecord } = await import(
-                "@/pages/teacher/canteen/edit/edit-canteen.tsx"
-              );
+              const { default: EditCanteenRecord } =
+                await import("@/pages/teacher/canteen/edit/edit-canteen.tsx");
               return { Component: EditCanteenRecord };
             }}
           />
@@ -590,18 +538,16 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="prepayments"
           lazy={async () => {
-            const { default: PrepaymentsLayout } = await import(
-              "@/pages/teacher/prepayments/index.tsx"
-            );
+            const { default: PrepaymentsLayout } =
+              await import("@/pages/teacher/prepayments/index.tsx");
             return { Component: PrepaymentsLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Prepayments } = await import(
-                "@/pages/teacher/prepayments/prepayments.tsx"
-              );
+              const { default: Prepayments } =
+                await import("@/pages/teacher/prepayments/prepayments.tsx");
               return { Component: Prepayments };
             }}
           />
@@ -610,18 +556,16 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="settings"
           lazy={async () => {
-            const { default: SettingsLayout } = await import(
-              "@/pages/teacher/settings/index.tsx"
-            );
+            const { default: SettingsLayout } =
+              await import("@/pages/teacher/settings/index.tsx");
             return { Component: SettingsLayout };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Settings } = await import(
-                "@/pages/teacher/settings/settings.tsx"
-              );
+              const { default: Settings } =
+                await import("@/pages/teacher/settings/settings.tsx");
               return { Component: Settings };
             }}
           />
@@ -629,9 +573,8 @@ const rootRoutes = createBrowserRouter(
           <Route
             path="profile"
             lazy={async () => {
-              const { default: Profile } = await import(
-                "@/pages/teacher/settings/profile/profile.tsx"
-              );
+              const { default: Profile } =
+                await import("@/pages/teacher/settings/profile/profile.tsx");
               return { Component: Profile };
             }}
           />
@@ -639,9 +582,8 @@ const rootRoutes = createBrowserRouter(
           <Route
             path="canteen"
             lazy={async () => {
-              const { default: Canteen } = await import(
-                "@/pages/teacher/settings/canteen/canteen.tsx"
-              );
+              const { default: Canteen } =
+                await import("@/pages/teacher/settings/canteen/canteen.tsx");
               return { Component: Canteen };
             }}
           />
@@ -649,36 +591,32 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="students"
           lazy={async () => {
-            const { default: ManageStudents } = await import(
-              "@/pages/teacher/students"
-            );
+            const { default: ManageStudents } =
+              await import("@/pages/teacher/students");
             return { Component: ManageStudents };
           }}
         >
           <Route
             index
             lazy={async () => {
-              const { default: Students } = await import(
-                "@/pages/teacher/students/students.tsx"
-              );
+              const { default: Students } =
+                await import("@/pages/teacher/students/students.tsx");
               return { Component: Students };
             }}
           />
           <Route
             path="add"
             lazy={async () => {
-              const { default: AddStudent } = await import(
-                "@/pages/teacher/students/add/create-student.tsx"
-              );
+              const { default: AddStudent } =
+                await import("@/pages/teacher/students/add/create-student.tsx");
               return { Component: AddStudent };
             }}
           />
           <Route
             path="owing-students"
             lazy={async () => {
-              const { default: OwingStudents } = await import(
-                "@/pages/teacher/students/owings/owing-students.tsx"
-              );
+              const { default: OwingStudents } =
+                await import("@/pages/teacher/students/owings/owing-students.tsx");
               return { Component: OwingStudents };
             }}
           />
@@ -687,9 +625,8 @@ const rootRoutes = createBrowserRouter(
           <Route
             path=":id/edit"
             lazy={async () => {
-              const { default: EditStudent } = await import(
-                "@/pages/teacher/students/edit/edit-student.tsx"
-              );
+              const { default: EditStudent } =
+                await import("@/pages/teacher/students/edit/edit-student.tsx");
               return { Component: EditStudent };
             }}
           />
@@ -698,15 +635,14 @@ const rootRoutes = createBrowserRouter(
         <Route
           path="*"
           lazy={async () => {
-            const { default: NotFound } = await import(
-              "@/pages/not-found/not-found.tsx"
-            );
+            const { default: NotFound } =
+              await import("@/pages/not-found/not-found.tsx");
             return { Component: NotFound };
           }}
         />
       </Route>
-    </>
-  )
+    </>,
+  ),
 );
 
 export default rootRoutes;
